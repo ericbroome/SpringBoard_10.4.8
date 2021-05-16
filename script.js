@@ -1,14 +1,12 @@
 
 
-cont filterOutOdds = (...args) => args.filter(arg => arg % 2 ===0)
+const filterOutOdds = (...args) => args.filter(arg => arg % 2 ===0);
 
-function findMin(...args) {
-
-}
-
+const findMin = (...args) => args.filter(arg => Math.min(...args));
 
 const mergeObjects = (obj1, obj2) => ({...obj1, ...obj2});
 
+const doubleAndReturnArgs = (arr, ...args) => ([...arr, ...args.map(element => element * 2)]);
 
 /** remove a random element in the items array
 and return a new array without that item. */

@@ -10,10 +10,7 @@
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="script.test.js"></script>
     <script>
-        fetch("script.js")
-        .then(response => {
-            document.querySelector("#theScript").innerHTML = response.text;
-        });
+        fetch("https://www.github.com/ericbroome/SpringBoard_10.4.8/script.js").then(response => document.querySelector("#theScript").innerHTML = `<pre>${response.text}</pre>`);
     </script>
   </head>
   <body onload="onLoad()">
