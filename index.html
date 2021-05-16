@@ -10,7 +10,11 @@
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="script.test.js"></script>
     <script>
-        fetch("https://www.github.com/ericbroome/SpringBoard_10.4.8/script.js")
+        fetch("https://www.github.com/ericbroome/SpringBoard_10.4.8/script.js", {
+            headers: {
+                'Access-Control-Allow-Origin' : '*'
+            }
+        })
             .then(response => response.text())
             .then(text => document.querySelector("#theScript").innerHTML = `<pre>${response.text}</pre>`);
     </script>
