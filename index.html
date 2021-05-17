@@ -9,19 +9,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/boot.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="script.test.js"></script>
-    <script>
-        onLoad = function() {
-        fetch("https://www.github.com/ericbroome/SpringBoard_10.4.8/script.js", {
-            headers: {
-                'Access-Control-Allow-Origin' : '*'
-            }
-        })
-        .then(response => response.text())
-        .then(text => document.querySelector("#theScript").innerHTML = `<pre>${response.text}</pre>`);
-    };
-    </script>
-  </head>
-  <body onload="onLoad()">
+ </head>
+  <body>
     <div id="theScript"></div>
   </body>
 </html>
